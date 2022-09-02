@@ -1,0 +1,1 @@
+Populate module is used to add an example file to an S3 bucket, to make sure that CloudFront and S3 configuration works correctly, i.e. website can be accessed.

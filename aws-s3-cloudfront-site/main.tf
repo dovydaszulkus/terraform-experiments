@@ -24,3 +24,12 @@ module "website" {
   main_bucket_name = var.main_bucket_name
 }
 
+/*
+  Upload an index.html file to an s3 bucket to ensure
+  that CloudFront distribution allows to access website
+*/
+module "populate" {
+  source      = "./modules/populate"
+  bucket_name = module.website.website_bucket_name
+  file_path   = "./files/index.html"
+}
